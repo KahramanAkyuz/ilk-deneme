@@ -54,6 +54,7 @@ public class RobotContainer {
   private final HopperSubsystem m_hooper = new HopperSubsystem();
   private final LiftSubsystem m_lift = new LiftSubsystem();
   private final SneakyTrajectory m_SneakyTrajectory = new  SneakyTrajectory(m_drive);
+  private final intake m_Intake = new intake();
 
   /**
    * The container for the robot.  Contains subsystems, OI devices, and commands.
@@ -163,7 +164,7 @@ public class RobotContainer {
       case 4:
       return trajectoryCommand();
       case 5:
-      return CenterRightCell(m_shooter, m_drive, m_hooper, m_SneakyTrajectory,);
+      return new CenterRightCell(m_SneakyTrajectory, m_shooter, m_Intake, m_hooper, m_drive);
       default:
       return null;
     }
