@@ -26,6 +26,7 @@ import frc.robot.Constants.DriveConstants;
 import frc.robot.Constants.JoystickConstants;
 import frc.robot.commands.*;
 import frc.robot.commands.otonomus.Autonomouscommand;
+import frc.robot.commands.otonomus.CenterRightCell;
 import frc.robot.commands.otonomus.Driveaotonomus;
 import frc.robot.commands.otonomus.RightAuto;
 //import frc.robot.subsystems.ExampleSubsystem;
@@ -52,6 +53,7 @@ public class RobotContainer {
   public final ArmSubsystem m_arm = new ArmSubsystem();
   private final HopperSubsystem m_hooper = new HopperSubsystem();
   private final LiftSubsystem m_lift = new LiftSubsystem();
+  private final SneakyTrajectory m_SneakyTrajectory = new  SneakyTrajectory(m_drive);
 
   /**
    * The container for the robot.  Contains subsystems, OI devices, and commands.
@@ -160,6 +162,8 @@ public class RobotContainer {
       return new RightAuto();
       case 4:
       return trajectoryCommand();
+      case 5:
+      return CenterRightCell(m_shooter, m_drive, m_hooper, m_SneakyTrajectory,);
       default:
       return null;
     }
