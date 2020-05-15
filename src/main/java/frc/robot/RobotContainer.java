@@ -26,8 +26,12 @@ import frc.robot.Constants.DriveConstants;
 import frc.robot.Constants.JoystickConstants;
 import frc.robot.commands.*;
 import frc.robot.commands.otonomus.Autonomouscommand;
+import frc.robot.commands.otonomus.Center5Cell;
+import frc.robot.commands.otonomus.CenterLeft5Cell;
 import frc.robot.commands.otonomus.CenterRightCell;
 import frc.robot.commands.otonomus.Driveaotonomus;
+import frc.robot.commands.otonomus.Left7Cell;
+import frc.robot.commands.otonomus.Right7Cell;
 import frc.robot.commands.otonomus.RightAuto;
 //import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.*;
@@ -165,6 +169,14 @@ public class RobotContainer {
       return trajectoryCommand();
       case 5:
       return new CenterRightCell(m_SneakyTrajectory, m_shooter, m_Intake, m_hooper, m_drive);
+      case 6:
+      return new CenterLeft5Cell(m_SneakyTrajectory, m_shooter, m_Intake, m_hooper, m_drive);
+      case 7:
+      return new Center5Cell(m_SneakyTrajectory, m_shooter, m_Intake, m_hooper, m_drive);
+      case 8:
+      return new Right7Cell(m_SneakyTrajectory, m_shooter, m_Intake, m_hooper, m_drive);
+      case 9:
+      return new Left7Cell(m_SneakyTrajectory, m_shooter, m_Intake, m_hooper, m_drive);
       default:
       return null;
     }
