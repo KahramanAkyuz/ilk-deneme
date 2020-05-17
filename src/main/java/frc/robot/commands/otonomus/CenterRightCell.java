@@ -31,9 +31,9 @@ public class CenterRightCell extends SequentialCommandGroup {
     super(
       new RunShooter(shooter, 0.75).withTimeout(0.75),
       new HopperCommands(hopper, 0.5).raceWith(new RunShooter(shooter, 0.75)).withTimeout(2),
-      s_trajectory.getRamsete(s_trajectory.centerRight6cell[0]).raceWith(new HopperCommands(hopper, 0.5))
+      s_trajectory.getRamsete(s_trajectory.centerRight6cell_0).raceWith(new HopperCommands(hopper, 0.5))
       .raceWith(new RunIntake(Intake, 0.75)).andThen(() -> drive.arcadeDrive(0, 0)),
-      s_trajectory.getRamsete(s_trajectory.centerRight6cell[1]).andThen(() -> drive.arcadeDrive(0, 0)),
+      s_trajectory.getRamsete(s_trajectory.centerRight6cell_1).andThen(() -> drive.arcadeDrive(0, 0)),
       new RunShooter(shooter, 0.75).withTimeout(0.75),
       new HopperCommands(hopper, 0.5).raceWith(new RunShooter(shooter, 0.75)).withTimeout(2)
       );

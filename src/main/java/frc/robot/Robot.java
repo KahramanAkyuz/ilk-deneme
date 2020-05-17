@@ -37,9 +37,16 @@ public class Robot extends TimedRobot {
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();
     m_autonomusChooser = new SendableChooser<Integer>();
-    m_autonomusChooser.setDefaultOption("orta", 1);
-    m_autonomusChooser.addOption("sağ", 2);
-    m_autonomusChooser.addOption("sol", 3);
+    m_autonomusChooser.setDefaultOption("orta", 0);
+    m_autonomusChooser.addOption("sağ", 1);
+    m_autonomusChooser.addOption("sol", 2);
+    m_autonomusChooser.addOption("Right Auto", 3);
+    m_autonomusChooser.addOption("Trajectory Command", 4);
+    m_autonomusChooser.addOption("Center Right Cell", 5);
+    m_autonomusChooser.addOption("CenterLeft5Cell", 6);
+    m_autonomusChooser.addOption("Center5Cell", 7);
+    m_autonomusChooser.addOption("Right7Cell", 8);
+    m_autonomusChooser.addOption("Left7Cell", 9);
     SmartDashboard.putData("otonom seçimi", m_autonomusChooser);
   }
 

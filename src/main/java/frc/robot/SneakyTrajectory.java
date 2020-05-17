@@ -26,11 +26,11 @@ import frc.robot.subsystems.DriveSubsystem;
  * Add your docs here.
  */
 public class SneakyTrajectory {
-    public Trajectory centerRight6cell[];
-    public Trajectory centerleft5cell[];
-    public Trajectory center5cell[];
-    public Trajectory right7cell[];
-    public Trajectory left7cell[];
+    public Trajectory centerRight6cell_0,centerRight6cell_1;
+    public Trajectory centerleft5cell_0,centerleft5cell_1;
+    public Trajectory center5cell_0,center5cell_1;
+    public Trajectory right7cell_0,right7cell_1;
+    public Trajectory left7cell_0,left7cell_1;
     private DriveSubsystem m_drive;
 
 
@@ -61,7 +61,7 @@ public class SneakyTrajectory {
      .addConstraint(autoVoltageConstraint);
      configBackward.setReversed(true);
      
-     centerRight6cell[0] = TrajectoryGenerator.generateTrajectory(
+     centerRight6cell_0 = TrajectoryGenerator.generateTrajectory(
         List.of(
              new Pose2d(12.80, 5.79, new Rotation2d(0)),
              new Pose2d(9.75, 7.54, new Rotation2d(0)),
@@ -69,7 +69,7 @@ public class SneakyTrajectory {
         
         configBackward);
         
-     centerRight6cell[1] = TrajectoryGenerator.generateTrajectory(
+     centerRight6cell_1 = TrajectoryGenerator.generateTrajectory(
         List.of(
              new Pose2d(7.92, 7.54, new Rotation2d(0)),
              new Pose2d(10.97, 5.79, new Rotation2d(0)),
@@ -77,53 +77,53 @@ public class SneakyTrajectory {
         
         configForward);
 
-        centerleft5cell[0] = TrajectoryGenerator.generateTrajectory(
+        centerleft5cell_0 = TrajectoryGenerator.generateTrajectory(
           List.of(
             new Pose2d(12.7, 4.8, new Rotation2d(0)),
             new Pose2d(10.2, 3.8, new Rotation2d(0))),
             
            configBackward);
 
-         centerleft5cell[1] = TrajectoryGenerator.generateTrajectory(
+         centerleft5cell_1 = TrajectoryGenerator.generateTrajectory(
            List.of(
              new Pose2d(10.2, 3.8, new Rotation2d(0)),
              new Pose2d(12.7, 4.8, new Rotation2d(0))
            ),
            configBackward);
-          center5cell[0] = TrajectoryGenerator.generateTrajectory(
+          center5cell_0 = TrajectoryGenerator.generateTrajectory(
             List.of(
               new Pose2d(12.8, 6, new Rotation2d(0)),
               new Pose2d(9.8, 5.5, new Rotation2d(0))
             ),
           configBackward);
-          center5cell[1] = TrajectoryGenerator.generateTrajectory(
+          center5cell_1 = TrajectoryGenerator.generateTrajectory(
             List.of(
               new Pose2d(9.8, 5.5, new Rotation2d(0)),
               new Pose2d(12.8, 6, new Rotation2d(0))
             ),
            configBackward);
-           right7cell[0] = TrajectoryGenerator.generateTrajectory(
+           right7cell_0 = TrajectoryGenerator.generateTrajectory(
              List.of(
                new Pose2d(12.8, 5, new Rotation2d(0)),
                new Pose2d(9.8, 3.9, new Rotation2d(0)),
                new Pose2d(9.7, 5.1, new Rotation2d(0))
              ),
             configBackward);
-            right7cell[1] = TrajectoryGenerator.generateTrajectory(
+            right7cell_1 = TrajectoryGenerator.generateTrajectory(
               List.of(
                 new Pose2d(9.7, 5.1, new Rotation2d(0)),
                new Pose2d(9.8, 3.9, new Rotation2d(0)),
                new Pose2d(12.8, 5, new Rotation2d(0))
               ),
              configBackward);
-             left7cell[0] = TrajectoryGenerator.generateTrajectory(
+             left7cell_0 = TrajectoryGenerator.generateTrajectory(
                List.of(
                  new Pose2d(12.6, 5.9, new Rotation2d(0)),
                  new Pose2d(9.7, 5.3, new Rotation2d(0)),
                  new Pose2d(9.8, 3.9, new Rotation2d(0))
                ),
              configBackward);
-             left7cell[1] = TrajectoryGenerator.generateTrajectory(
+             left7cell_1 = TrajectoryGenerator.generateTrajectory(
                List.of(
                 new Pose2d(9.8, 3.9, new Rotation2d(0)),
                 new Pose2d(9.7, 5.3, new Rotation2d(0)),
