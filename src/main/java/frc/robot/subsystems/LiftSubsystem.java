@@ -20,8 +20,8 @@ public class LiftSubsystem extends SubsystemBase {
   private final VictorSP liftMotor_1 = new VictorSP(10);
   private final VictorSP liftMotor_2 = new VictorSP(11);
   private final SpeedControllerGroup liftMotors =  new SpeedControllerGroup(liftMotor_1, liftMotor_2);
-  private final DigitalInput topLimitSwitch = new DigitalInput(4);
-  private final DigitalInput bottomLimitSwitch = new DigitalInput(5);
+  private final DigitalInput topLimitSwitch = new DigitalInput(8);
+  private final DigitalInput bottomLimitSwitch = new DigitalInput(9);
   public LiftSubsystem() {
 
   }
