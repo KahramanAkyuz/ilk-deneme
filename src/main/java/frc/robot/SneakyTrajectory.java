@@ -89,7 +89,7 @@ public class SneakyTrajectory {
              new Pose2d(10.2, 3.8, new Rotation2d(0)),
              new Pose2d(12.7, 4.8, new Rotation2d(0))
            ),
-           configBackward);
+           configForward);
           center5cell_0 = TrajectoryGenerator.generateTrajectory(
             List.of(
               new Pose2d(12.8, 6, new Rotation2d(0)),
@@ -101,7 +101,7 @@ public class SneakyTrajectory {
               new Pose2d(9.8, 5.5, new Rotation2d(0)),
               new Pose2d(12.8, 6, new Rotation2d(0))
             ),
-           configBackward);
+           configForward);
            right7cell_0 = TrajectoryGenerator.generateTrajectory(
              List.of(
                new Pose2d(12.8, 5, new Rotation2d(0)),
@@ -115,7 +115,7 @@ public class SneakyTrajectory {
                new Pose2d(9.8, 3.9, new Rotation2d(0)),
                new Pose2d(12.8, 5, new Rotation2d(0))
               ),
-             configBackward);
+             configForward);
              left7cell_0 = TrajectoryGenerator.generateTrajectory(
                List.of(
                  new Pose2d(12.6, 5.9, new Rotation2d(0)),
@@ -129,7 +129,7 @@ public class SneakyTrajectory {
                 new Pose2d(9.7, 5.3, new Rotation2d(0)),
                 new Pose2d(12.6, 5.9, new Rotation2d(0))
                ),
-             configBackward);
+             configForward);
 
     }
      
